@@ -8,9 +8,19 @@ const routes = [
     component: Home,
     children: [
       {
-        path: 'content/:disctrit',
+        path: 'content',
         name: 'content',
         component: () => import('@/views/Content.vue')
+      },
+      {
+        path: 'merchantDetail',
+        name: 'merchantDetail',
+        component: () => import('@/views/MerchantDetail.vue')
+      },
+      {
+        path: 'omo',
+        name: 'omo',
+        component: () => import('@/views/Omo.vue')
       }
     ]
   }

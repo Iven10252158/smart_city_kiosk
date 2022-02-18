@@ -5,14 +5,15 @@ export default createStore({
     image: '',
     video: {
       src: ''
-    }
+    },
+    district: ''
   },
   mutations: {
     onOpen () {
       console.log('vuex onOpen')
     },
     handWsRes (state, payload) {
-      console.log('payload', payload)
+      // console.log('payload', payload)
       if (payload.id) {
         payload.content.forEach(item => {
           switch (item.type) {

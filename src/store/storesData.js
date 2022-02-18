@@ -6,7 +6,9 @@ const state = {
   allTypes: [],
   types: [],
   typeBtn: '',
-  stores: []
+  stores: [],
+  district: '',
+  isShow: false
 }
 
 const mutations = {
@@ -44,6 +46,13 @@ const mutations = {
     state.categories = payload.region
     state.allTypes = payload.type
     // console.log(payload)
+  },
+  getDistrict (state, payload) {
+    state.district = payload
+  },
+  controlArrowBtn (state) {
+    state.isShow = !state.isShow
+    console.log('state.isShow', state.isShow)
   }
 }
 
@@ -72,6 +81,12 @@ const actions = {
         commit('getCategories', res.data)
         return res.data
       })
+  },
+  getDistrict ({ commit }, district) {
+    commit('getDistrict', district)
+  },
+  showArrowBtn ({ commit }) {
+    commit('controlArrowBtn')
   }
 }
 
@@ -93,6 +108,12 @@ const getters = {
   },
   TypeBtn (state) {
     return state.typeBtn
+  },
+  district (state) {
+    return state.district
+  },
+  isShow (state) {
+    return state.isShow
   }
 }
 

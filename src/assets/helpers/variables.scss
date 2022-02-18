@@ -80,9 +80,9 @@ $dark:          $gray-900 !default;
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary":    $primary,
-  "secondary":  $secondary,
+  "secondary":  #00A5A7, //$secondary,
   "success":    $success,
-  "info":       $info,
+  "info":       #002426, //$info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
